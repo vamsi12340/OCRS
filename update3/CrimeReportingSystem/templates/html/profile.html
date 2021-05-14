@@ -1,0 +1,32 @@
+{% extends 'html/header.html' %}
+{% block title %} MyProfile {% endblock %}
+{% block content %}
+<div class="container">
+	<div class="col-md mt-4 mb-3 card shadow-lg mx-1">
+		<h3 class="p-2 bg-warning text-center text-light border rounded my-2">User Details</h3>
+		<table class="table table-borderless">
+			<tr>
+					<th>Username</th>
+					<td>{{user.username}}</td>
+				</tr>
+				<tr>
+					<th>Age</th>
+					<td>{{user.myprofile.age}}</td>
+				</tr>
+				<tr>
+					<th>Email</th>
+					<td></td>
+				</tr>
+			</table>
+			<div class="row">
+				<div class="col">
+					<a href="{% url 'dsh' %}" class="form-control m-2 btn btn-secondary text-light">Back</a>
+				</div>
+				<div class="col">
+					<a href="{% url 'uppro' %}" class="form-control m-2 btn btn-secondary text-light">Update Details</a>
+				</div>
+			</div>
+		</div>
+</div>
+
+{% endblock %}

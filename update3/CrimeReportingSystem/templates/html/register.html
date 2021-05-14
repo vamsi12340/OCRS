@@ -1,0 +1,34 @@
+{% extends 'html/header.html' %}
+{% block title %}Register{% endblock %}
+{% block content %}
+
+<!-- <head>
+	<link rel="stylesheet" href="https://i.ytimg.com/vi/iUqHJmQmJOo/maxresdefault.jpg">
+</head> -->
+<div class="container">
+	<div class="card col-md-6 mx-auto mt-5 shadow-lg">
+		<div class="card-body">
+			<h3 class="text-white p-3 bg-secondary text-center border rounded">Registration</h3>
+			<form method="POST">
+			{% csrf_token %}
+			<table class="table table-borderless">
+				{% for k in u %}
+				<tr>
+					<td>{{k}}</td>
+				</tr>
+				{% endfor %}
+			</table>
+			<div class="row">
+				<div class="col">
+					<a href="{% url 'lg' %}" class="form-control btn btn-primary col-sm" >Existing User</a>
+				</div><br><br>
+				<div class="col">
+					<input type="submit" value="Register" class="btn btn-success btn-block col-sm">
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+{% endblock %}
+			
+				
